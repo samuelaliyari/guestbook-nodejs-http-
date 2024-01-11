@@ -95,6 +95,7 @@ h1 {
     bottom: 3%;
     padding: 1% 2%;
     border: 1px solid rgb(255, 69, 69);
+    cursor: pointer;
 }
 
 .cardHolder h2,
