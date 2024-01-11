@@ -63,5 +63,5 @@ const server = http.createServer((req, res) => {
         renderPage(path).then(data => res.write(data)).then(() => res.end()).catch(err => console.log(err))
     }
 })
-const PORT = 8080
+const PORT = process.env.PORT || 8080
 server.listen(PORT, console.log("server running at " + PORT))
