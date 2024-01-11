@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="/assets/style.css" />
+		<link
+			rel="shortcut icon"
+			href="data:image/x-icon;,"
+			type="image/x-icon" />
+		<title>Add your story</title>
+	</head>
+	<body style="background-image: url('/images/about.jpeg')">
+		<nav>
+			<ul>
+				<li><a href="/pages/home.html">Home</a></li>
+				<li><a href="/pages/addstory.html">Add your Story</a></li>
+				<li><a href="/pages/contact.html">Contact</a></li>
+				<li><a href="/pages/faq.html">FAQ</a></li>
+			</ul>
+		</nav>
+		<section class="formWrapper">
+			<form onsubmit="return false">
+				<article>
+					<input
+						type="text"
+						id="name"
+						placeholder="Your Name" />
+					<textarea
+						name=""
+						id="text"
+						cols="30"
+						rows="10"
+						placeholder="Tell your Story here"></textarea>
+
+					<input
+						type="submit"
+						value="Post"
+						onclick="addPost()" />
+				</article>
+			</form>
+		</section>
+		<script src="/js/addpost.js"></script>
+	</body>
+</html>
