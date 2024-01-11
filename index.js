@@ -48,6 +48,16 @@ const server = http.createServer((req, res) => {
         })
         res.end()
     }
+    else if (req.url === "/update/data.json" && req.method === "POST") {
+        let newData = ""
+        console.log("deleing ...")
+        req.on("data", chunk => newData += chunk).on("end", () => {
+            const data = JSON.parse(newData.toString())
+            console.log(data)
+            fs.writeFile("./data.json", JSON.stringify(data), (err) => reject(err))
+        })
+        res.end()
+    }
     else {
         const path = req.url === "/" && req.method === "GET" ? "./public/pages/home.html" : "./public" + req.url
         renderPage(path).then(data => res.write(data)).then(() => res.end()).catch(err => console.log(err))
